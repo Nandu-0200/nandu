@@ -1,0 +1,3 @@
+Name: Nandini Gubbala
+Course: BSC-Computer Science
+GitHub: GitHub helps us collaborate and track changes in projects.
