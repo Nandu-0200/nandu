@@ -1,98 +1,115 @@
-/* General Reset */
+:root {
+  --accent: #6b46c1;
+  --muted: #666;
+  --bg: #f7f7fc;
+}
+
 body {
   font-family: Arial, sans-serif;
+  background: var(--bg);
   margin: 0;
-  padding: 0;
-  background: #f9fafc;
-  color: #333;
+  color: #111;
 }
 
 /* Header */
-header {
-  background: #ff5200;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-/* Navigation Bar */
-nav {
-  background: #ff7a33;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 50px;
-  background: url("https://source.unsplash.com/1600x600/?food,restaurant") no-repeat center/cover;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-.btn {
-  background: #ff5200;
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-/* Restaurants Section */
-.restaurants {
-  padding: 40px;
+.site-header {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #fff, #f3f3ff);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.controls input, .controls select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
-.card {
-  background: white;
+/* Layout */
+main {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 1rem;
+  flex: 1;
+}
+.book {
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  width: 280px;
-  margin: 15px;
-  text-align: center;
-  overflow: hidden;
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  box-shadow: 0 4px 18px rgba(80,60,100,0.04);
 }
-
-.card img {
-  width: 100%;
-  height: 180px;
+.cover {
+  width: 90px;
+  height: 130px;
   object-fit: cover;
+  border-radius: 6px;
+}
+.meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.meta h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.author {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.desc {
+  margin: 0.5rem 0;
+  color: #444;
+  font-size: 0.9rem;
+  flex: 1;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:active {
+  transform: translateY(1px);
 }
 
-.card h3 {
-  margin: 10px 0;
+/* Cart */
+.cart {
+  width: 260px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(100,80,140,0.06);
 }
-
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
+.cart h2 {
+  margin-top: 0;
+}
+.cart-total {
+  font-weight: 700;
+  margin-top: 1rem;
 }
