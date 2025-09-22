@@ -1,127 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodieX – Online Food Delivery</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafc;
-      color: #333;
-    }
-    header {
-      background: #ff5200;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #ff7a33;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px;
-      background: url("https://source.unsplash.com/1600x600/?food,restaurant") no-repeat center/cover;
-      color: white;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .btn {
-      background: #ff5200;
-      padding: 12px 20px;
-      border-radius: 8px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 15px;
-    }
-    .restaurants {
-      padding: 40px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-      width: 280px;
-      margin: 15px;
-      text-align: center;
-      overflow: hidden;
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 10px 0;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+  <title>Online Bookstore</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>🍔 FoodieX</h1>
-    <p>Order food online – Fast & Fresh</p>
+  <!-- Header -->
+  <header class="site-header">
+    <h1>Page & Pixel Bookstore</h1>
+    <div class="controls">
+      <input type="text" placeholder="Search books, authors..." />
+      <select>
+        <option>All Categories</option>
+        <option>Fiction</option>
+        <option>Technology</option>
+        <option>Travel</option>
+      </select>
+    </div>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Restaurants</a>
-    <a href="#">Offers</a>
-    <a href="#">Cart</a>
-  </nav>
+  <!-- Main content -->
+  <main>
+    <!-- Books grid -->
+    <section class="grid">
+      <article class="book">
+        <img src="cover1.jpg" alt="Book Cover" class="cover" />
+        <div class="meta">
+          <h3>The Last Library</h3>
+          <p class="author">by A. Verma</p>
+          <p class="desc">A lyrical tale of books, memory and the slow city.</p>
+          <div class="foot">
+            <div>₹249</div>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </article>
 
-  <section class="hero">
-    <h1>Craving Delicious Food?</h1>
-    <p>Get it delivered to your doorstep in 30 minutes</p>
-    <a href="#" class="btn">Order Now</a>
-  </section>
+      <article class="book">
+        <img src="cover2.jpg" alt="Book Cover" class="cover" />
+        <div class="meta">
+          <h3>Code & Conscience</h3>
+          <p class="author">by S. Reddy</p>
+          <p class="desc">Ethical engineering and practical case studies for modern devs.</p>
+          <div class="foot">
+            <div>₹499</div>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </article>
 
-  <section class="restaurants">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
-      <h3>Pizza Palace</h3>
-      <p>Cheesy goodness, delivered hot 🔥</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
-      <h3>Burger Hub</h3>
-      <p>Juicy burgers with extra fries 🍟</p>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?indianfood" alt="Indian Food">
-      <h3>Spice Corner</h3>
-      <p>Authentic Indian flavors 🌶️</p>
-    </div>
-  </section>
+      <article class="book">
+        <img src="cover3.jpg" alt="Book Cover" class="cover" />
+        <div class="meta">
+          <h3>Spice Trails</h3>
+          <p class="author">by M. Iqbal</p>
+          <p class="desc">A culinary travelogue through markets, kitchens and history.</p>
+          <div class="foot">
+            <div>₹349</div>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
 
-  <footer>
-    <p>© 2025 FoodieX. Powered by DevOps Demo.</p>
-  </footer>
+    <!-- Cart -->
+    <aside class="cart">
+      <h2>Cart</h2>
+      <ul>
+        <li>The Last Library — ₹249</li>
+        <li>Code & Conscience — ₹499</li>
+      </ul>
+      <div class="cart-total">Total: ₹748</div>
+    </aside>
+  </main>
 </body>
 </html>
